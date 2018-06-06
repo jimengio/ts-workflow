@@ -9,8 +9,6 @@ module.exports = {
 		vendor: [
 			"react",
 			"react-dom",
-			"mobx",
-			"mobx-react",
 			"react-router-dom",
 			"font-awesome/css/font-awesome.min.css"
 		],
@@ -21,14 +19,32 @@ module.exports = {
 		path: path.join(__dirname, "/dist")
 	},
 	devtool: "none",
+	optimization: {
+		splitChunks: {
+			chunks: "async",
+			minSize: 30000,
+			minChunks: 1,
+			maxAsyncRequests: 5,
+			maxInitialRequests: 3,
+			name: true,
+			cacheGroups: {
+				default: {
+					minChunks: 2,
+					priority: -20,
+					reuseExistingChunk: true,
+				},
+				vendors: {
+					test: /[\\/]node_modules[\\/]/,
+					priority: -10
+				}
+			}
+		},
+	},
 	module: {
 		rules: [
 			{
 				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					fallback: "style-loader",
-					use: "css-loader"
-				})
+				loaders: ["style-loader", "css-loader"]
 			},
 			{
 				test: /\.tsx?$/,
@@ -54,11 +70,6 @@ module.exports = {
 				NODE_ENV: JSON.stringify("production")
 			}
 		}),
-		new webpack.optimize.CommonsChunkPlugin({
-			name: "vendor",
-			minChunks: Infinity
-		}),
-		new ExtractTextPlugin("[name].[chunkhash:8].css"),
 		new UglifyJSPlugin({
 			uglifyOptions: { ie8: false, ecma: 8 }
 		}),

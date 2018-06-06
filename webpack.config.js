@@ -3,7 +3,7 @@ var webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-	entry: ["webpack-hud/src/index.js", "./src/main.tsx"],
+	entry: ["./src/main.tsx"],
 	output: {
 		filename: "index.js",
 		path: path.join(__dirname, "/dist")
