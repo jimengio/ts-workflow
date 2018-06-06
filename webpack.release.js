@@ -1,10 +1,10 @@
 var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
+	mode: "production",
 	entry: {
 		vendor: [
 			"react",

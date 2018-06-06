@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot",
     "dev": "webpack-dev-server --hot",
+    "watch": "webpack-dev-server --hot",
     "release": "rm -rf dist/* && webpack --progress --config webpack.release.js",
     "build": "yarn release",
-    "serve": "http-server dist/ -s"
+    "serve": "http-server dist/ -s",
+    "postinstall": "rm -rfv node_modules/@types/react-*/node_modules/@types/react"
   },
   "keywords": [],
   "author": "",
@@ -22,12 +23,12 @@
     "awesome-typescript-loader": "^5.0.0",
     "css-loader": "^0.28.11",
     "emotion": "^9.1.3",
-    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "font-awesome": "^4.7.0",
     "history": "^4.6.1",
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.11.0",
+    "immer": "^1.3.1",
     "lodash": "^4.17.10",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
