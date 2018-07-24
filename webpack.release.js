@@ -9,7 +9,6 @@ module.exports = {
 		vendor: [
 			"react",
 			"react-dom",
-			"react-router-dom",
 			"font-awesome/css/font-awesome.min.css"
 		],
 		main: ["./src/main.tsx"]

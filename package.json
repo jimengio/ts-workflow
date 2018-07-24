@@ -31,6 +31,7 @@
     "lodash": "^4.17.10",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "ruled-router": "^0.2.2",
     "style-loader": "^0.21.0",
     "typescript": "^2.9.2",
     "typescript-styled-plugin": "^0.10.0",
