@@ -1,6 +1,8 @@
 
-MST workflow
+Workflow
 ----
+
+Based on React, immer, emotion, and a customized router.
 
 ### Usage
 
