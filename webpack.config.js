@@ -29,7 +29,7 @@ module.exports = {
 				loader: "url-loader",
 				query: {
 					limit: 100,
-					name: "fonts/[hash:8].[ext]"
+					name: "assets/[hash:8].[ext]"
 				}
 			}
 		]
