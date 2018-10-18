@@ -1,7 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
 	mode: "production",
@@ -69,9 +69,7 @@ module.exports = {
 				NODE_ENV: JSON.stringify("production")
 			}
 		}),
-		new UglifyJSPlugin({
-			uglifyOptions: { ie8: false, ecma: 8 }
-		}),
+		new TerserPlugin(),
 		new HtmlWebpackPlugin({
 			filename: "index.html",
 			template: "template.ejs"
