@@ -1,16 +1,10 @@
 var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
 	mode: "production",
 	entry: {
-		vendor: [
-			"react",
-			"react-dom",
-			"font-awesome/css/font-awesome.min.css"
-		],
 		main: ["./src/main.tsx"]
 	},
 	output: {
@@ -19,8 +13,11 @@ module.exports = {
 	},
 	devtool: "none",
 	optimization: {
+		minimize: true,
+		namedModules: true,
+		chunkIds: 'named',
 		splitChunks: {
-			chunks: "async",
+			chunks: "all",
 			minSize: 30000,
 			minChunks: 1,
 			maxAsyncRequests: 5,
@@ -69,7 +66,6 @@ module.exports = {
 				NODE_ENV: JSON.stringify("production")
 			}
 		}),
-		new TerserPlugin(),
 		new HtmlWebpackPlugin({
 			filename: "index.html",
 			template: "template.ejs"
