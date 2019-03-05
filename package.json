@@ -47,6 +47,6 @@
     "lodash": "^4.17.11",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "@jimengio/ruled-router": "^0.2.7-a1"
+    "@jimengio/ruled-router": "^0.2.7"
   }
 }

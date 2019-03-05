@@ -79,10 +79,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
 
-"@jimengio/ruled-router@^0.2.7-a1":
-  version "0.2.7-a1"
-  resolved "https://registry.yarnpkg.com/@jimengio/ruled-router/-/ruled-router-0.2.7-a1.tgz#baae6ee0341bd415c9ef2ec5095c779f35c0d91d"
-  integrity sha512-orYcOiJsAgD8s0CLHw46TUeTSunpxGGtl0EHVlr94LbEs15xVr8wX5e8fZWYgFnX5wTfHEOmTOyuYC8gNingzA==
+"@jimengio/ruled-router@^0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@jimengio/ruled-router/-/ruled-router-0.2.7.tgz#5ac98582644a346433d5779fb6c629538de966e8"
+  integrity sha512-CobzosO9EJsn1BCK8M9Nr6bU7Q93UpezyHXintaict3mi8wEgchjxWAgVPJ+rm1OuvNxO6I72S+LrWaRThiWYg==
   dependencies:
     immer "*"
     lodash "*"
