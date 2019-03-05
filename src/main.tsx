@@ -1,7 +1,7 @@
 import ReactDOM, { unstable_renderSubtreeIntoContainer } from "react-dom";
 import React from "react";
 
-import { parseRoutePath, IRouteParseResult } from "ruled-router";
+import { parseRoutePath, IRouteParseResult } from "@jimengio/ruled-router";
 
 import { routerRules } from "./models/router-rules";
 
