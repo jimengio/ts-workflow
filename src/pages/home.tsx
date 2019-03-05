@@ -14,10 +14,12 @@ export default class Home extends React.Component {
         >
           Open content
         </a>
-        <a onClick={async () => {
-          let {showTime} = await import('../util/time')
-          showTime()
-        }} >
+        <a
+          onClick={async () => {
+            let { showTime } = await import("../util/time" /* webpackChunkName:"time" */);
+            showTime();
+          }}
+        >
           Use
         </a>
       </div>

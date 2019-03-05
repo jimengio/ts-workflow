@@ -1,5 +1,5 @@
 import React from "react";
-import { parseRoutePath, IRouteParseResult } from "ruled-router";
+import { parseRoutePath, IRouteParseResult } from "@jimengio/ruled-router";
 import { css } from "emotion";
 
 import Home from "./home";
