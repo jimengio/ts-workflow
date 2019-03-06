@@ -18,8 +18,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/history": "^4.7.2",
-    "@types/lodash": "^4.14.121",
-    "@types/react": "^16.8.3",
+    "@types/lodash": "^4.14.122",
+    "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.2",
     "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^2.1.0",
@@ -30,23 +30,23 @@
     "html-webpack-plugin": "^3.2.0",
     "http-server": "^0.11.0",
     "style-loader": "^0.23.1",
-    "typescript": "^3.3.3",
-    "typescript-styled-plugin": "^0.13.0",
+    "typescript": "^3.3.3333",
+    "typescript-styled-plugin": "^0.14.0",
     "url-loader": "^1.1.2",
-    "webpack": "^4.29.5",
+    "webpack": "^4.29.6",
     "webpack-bundle-analyzer": "^3.1.0",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14",
+    "webpack-dev-server": "^3.2.1",
     "webpack-hud": "^0.1.2"
   },
   "dependencies": {
-    "dayjs": "^1.8.6",
+    "dayjs": "^1.8.8",
     "emotion": "^10.0.7",
     "font-awesome": "^4.7.0",
-    "immer": "^2.0.0",
+    "immer": "^2.1.1",
     "lodash": "^4.17.11",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "@jimengio/ruled-router": "^0.2.7"
   }
 }
