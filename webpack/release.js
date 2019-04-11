@@ -4,8 +4,9 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 let HtmlIncludeAssetsPlugin = require("html-webpack-include-assets-plugin");
 // let { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 let DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
+let ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
-let { matchCssRule, matchFontsRule, matchTsRule } = require("./shared");
+let { matchCssRule, matchFontsRule, matchTsReleaseRule } = require("./shared");
 let splitChunks = require("./split-chunks");
 let dllManifest = require("./dll/manifest-release.json");
 
@@ -26,12 +27,13 @@ module.exports = {
     splitChunks: splitChunks,
   },
   module: {
-    rules: [matchCssRule, matchFontsRule, matchTsRule],
+    rules: [matchCssRule, matchFontsRule, matchTsReleaseRule],
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
+    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
     new webpack.DllReferencePlugin({
       manifest: path.resolve(__dirname, "dll/manifest-release.json"),
     }),
