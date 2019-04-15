@@ -32,6 +32,16 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
+  stats: {
+    all: false,
+    colors: true,
+    errors: true,
+    errorDetails: true,
+    performance: true,
+    reasons: true,
+    timings: true,
+    warnings: true,
+  },
   plugins: [
     new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
     new webpack.DllReferencePlugin({
