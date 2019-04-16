@@ -10,7 +10,7 @@ let dllManifest = require("./dll/manifest.json");
 
 module.exports = {
   mode: "development",
-  entry: ["./src/main.tsx"],
+  entry: ["webpack-hud", "./src/main.tsx"],
   output: {
     filename: "index.js",
     path: path.join(__dirname, "/dist"),
@@ -47,7 +47,7 @@ module.exports = {
     splitChunks: splitChunks,
   },
   plugins: [
-    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
+    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true, async: false }),
     new webpack.DllReferencePlugin({
       manifest: path.resolve(__dirname, "dll/manifest.json"),
     }),
