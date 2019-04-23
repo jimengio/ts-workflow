@@ -12,11 +12,15 @@
     "jsx": "react",
     "lib": ["es2016", "dom"],
     "types": [],
-    "baseUrl": "./example/",
     "plugins": [
       {
         "name": "typescript-styled-plugin"
       }
     ]
+  },
+  "include": ["src/*.ts", "src/*.tsx", "src/*/*.ts"],
+  "exclude": ["lib/*"],
+  "awesomeTypescriptLoaderOptions": {
+    "useCache": true
   }
 }

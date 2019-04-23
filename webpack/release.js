@@ -1,7 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-let HtmlIncludeAssetsPlugin = require("html-webpack-include-assets-plugin");
+let HtmlWebpackTagsPlugin = require("html-webpack-tags-plugin");
 // let { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 let DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 let ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
@@ -13,7 +13,7 @@ let dllManifest = require("./dll/manifest-release.json");
 module.exports = {
   mode: "production",
   entry: {
-    main: ["./src/main.tsx"],
+    main: ["./example/main.tsx"],
   },
   output: {
     filename: "[name].[chunkhash:8].js",
@@ -56,8 +56,8 @@ module.exports = {
       filename: "index.html",
       template: "template.ejs",
     }),
-    new HtmlIncludeAssetsPlugin({
-      assets: [`${dllManifest.name}.js`],
+    new HtmlWebpackTagsPlugin({
+      tags: [`${dllManifest.name}.js`],
       append: false,
     }),
     new DuplicatePackageCheckerPlugin(),
