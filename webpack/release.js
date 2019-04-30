@@ -31,6 +31,7 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    modules: [path.join(__dirname, "../example"), "node_modules"],
   },
   stats: {
     all: false,
@@ -43,7 +44,7 @@ module.exports = {
     warnings: true,
   },
   plugins: [
-    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true }),
+    new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true, async: false }),
     new webpack.DllReferencePlugin({
       manifest: path.resolve(__dirname, "dll/manifest-release.json"),
     }),
