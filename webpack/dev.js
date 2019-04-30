@@ -21,6 +21,7 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    modules: [path.join(__dirname, "../example"), "node_modules"],
   },
   devServer: {
     contentBase: __dirname,

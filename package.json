@@ -12,7 +12,6 @@
     "build": "yarn release",
     "serve": "http-server dist/ -s",
     "compile": "tsc -d --project tsconfig-compile.json --outDir lib/",
-    "prepare": "yarn compile",
     "upload": "rsync -avr --progress dist/ fe.jimu.io:~/repo/jimengio/ts-workflow",
     "gen-router": "webpack --config webpack/gen-router.js && node dist/gen-router.js",
     "postinstall": "rm -rfv node_modules/@types/*/node_modules/@types/react"
@@ -51,7 +50,7 @@
     "webpack-hud": "^0.1.2"
   },
   "dependencies": {
-    "@jimengio/ruled-router": "^0.2.8",
+    "@jimengio/ruled-router": "^0.2.10-a2",
     "dayjs": "^1.8.13",
     "emotion": "^10.0.9",
     "font-awesome": "^4.7.0",

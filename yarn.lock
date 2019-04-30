@@ -91,10 +91,12 @@
   resolved "https://registry.yarnpkg.com/@jimengio/router-code-generator/-/router-code-generator-0.1.2.tgz#f830451c730d5e0bdd15af92c706df91597f7af5"
   integrity sha512-Us5nkGucj7JVHS3iJEEBbrn54Wl5/JSJyDHmlL5HM2H03VrkoXxPzHeq0plmnFZE5fhH71xtta9c0Q43EJkZhA==
 
-"@jimengio/ruled-router@^0.2.8":
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/@jimengio/ruled-router/-/ruled-router-0.2.8.tgz#905005f3189be7a0ec7d82ae1552bf8357edb378"
-  integrity sha512-On7wNHG5rnBupVV0w/Sayr9YgUgdgYzFPZ+0cKl0dTg5GD8LrP9ZH/iM0D0xjTZe1KiUH/3bMpNrLJ9bjwpbUw==
+"@jimengio/ruled-router@^0.2.10-a2":
+  version "0.2.10-a2"
+  resolved "https://registry.yarnpkg.com/@jimengio/ruled-router/-/ruled-router-0.2.10-a2.tgz#65000d9447cdccb2b9cdd072606d214d1325d858"
+  integrity sha512-ykgp3EB8OiuO722mpuu5CjYO4eudYkafps/B57ACPaNM2rD3Vrwj9K50XZucjsx2/YEA7gIIvHItSAZSgXyrEg==
+  dependencies:
+    query-string "^6.5.0"
 
 "@types/json5@^0.0.29":
   version "0.0.29"

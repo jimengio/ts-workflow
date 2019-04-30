@@ -4,14 +4,18 @@ import { css } from "emotion";
 
 import Home from "./home";
 import Content from "./content";
+import { HashRedirect } from "@jimengio/ruled-router/lib/dom";
+import { genRouter } from "controller/generated-router";
 
 const renderChildPage = (routerTree: IRouteParseResult) => {
   if (routerTree != null) {
     switch (routerTree.name) {
-      case "home":
+      case genRouter.home.name:
         return <Home />;
-      case "content":
+      case genRouter.content.name:
         return <Content />;
+      default:
+        return <HashRedirect to={genRouter.home.name} delay={2} placeholder={"2s to redirect"} />;
     }
   }
   return <div>NOTHING</div>;

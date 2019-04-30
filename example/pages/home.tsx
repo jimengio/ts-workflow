@@ -1,19 +1,14 @@
 import React from "react";
 import { css } from "emotion";
+import { genRouter } from "controller/generated-router";
+import { HashLink } from "@jimengio/ruled-router/lib/dom";
 
 export default class Home extends React.Component {
   render() {
     return (
       <div>
         Home Page
-        <a
-          onClick={() => {
-            window.location.hash = "#/content";
-          }}
-          className={styleButton}
-        >
-          Open content
-        </a>
+        <HashLink to={genRouter.content.name} text={"Open content"} className={styleButton} />
         <a
           onClick={async () => {
             let { showTime } = await import("../util/time" /* webpackChunkName:"time" */);
