@@ -25,6 +25,12 @@ export let genRouter = {
     path: () => `/content`,
     go: () => switchPath(`/content`),
   },
+  else: {
+    name: "else",
+    raw: "else",
+    path: () => `/else`,
+    go: () => switchPath(`/else`),
+  },
   _: {
     name: "home",
     raw: "",

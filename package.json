@@ -13,7 +13,7 @@
     "serve": "http-server dist/ -s",
     "compile": "tsc -d --project tsconfig-compile.json --outDir lib/",
     "upload": "rsync -avr --progress dist/ fe.jimu.io:~/repo/jimengio/ts-workflow",
-    "gen-router": "webpack --config webpack/gen-router.js && node dist/gen-router.js",
+    "gen-router": "webpack --config webpack/router-config.js && node dist/gen-router.js",
     "postinstall": "rm -rfv node_modules/@types/*/node_modules/@types/react"
   },
   "keywords": [],
