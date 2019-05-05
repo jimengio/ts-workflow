@@ -5,6 +5,7 @@ let HtmlWebpackTagsPlugin = require("html-webpack-tags-plugin");
 // let { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 let DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 let ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+let ProgressPlugin = require("@jimengio/ci-progress-webpack-plugin");
 
 let { matchCssRule, matchFontsRule, matchTsReleaseRule } = require("./shared");
 let splitChunks = require("./split-chunks");
@@ -62,6 +63,7 @@ module.exports = {
       append: false,
     }),
     new DuplicatePackageCheckerPlugin(),
+    new ProgressPlugin({ interval: 600 }),
     // new BundleAnalyzerPlugin(),
   ],
 };
