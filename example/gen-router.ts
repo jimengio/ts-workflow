@@ -6,6 +6,7 @@ import prettier from "prettier";
 
 let filePath = path.join(process.env.PWD, "example/controller/generated-router.ts");
 let prettierConfigs = JSON.parse(fs.readFileSync(path.join(process.env.PWD, ".prettierrc"), "utf8"));
+prettierConfigs.parser = "typescript";
 
 let originalFile = fs.readFileSync(filePath, "utf8");
 let separator = "\n// generated\n";
