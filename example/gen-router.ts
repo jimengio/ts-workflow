@@ -22,4 +22,4 @@ let content = pieces.join(separator);
 let formatted = prettier.format(content, prettierConfigs);
 
 fs.writeFileSync(filePath, formatted);
-console.log("wrote to ", filePath);
+console.log("Wrote to", path.relative(process.env.PWD, filePath));
