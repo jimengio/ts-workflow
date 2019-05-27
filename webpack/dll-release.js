@@ -7,14 +7,14 @@ let DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-p
 let { matchCssRule, matchFontsRule } = require("./shared");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: ["react", "react-dom", "emotion", "immer", "dayjs", "lodash", "@jimengio/ruled-router"],
   output: {
     filename: "dll_vendors_[hash:8].js",
     path: path.join(__dirname, "../dist"),
     library: "dll_vendors_[hash:8]",
   },
-  devtool: "cheap-source-map",
+  devtool: "none",
   module: {
     rules: [matchCssRule, matchFontsRule],
   },
