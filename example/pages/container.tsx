@@ -15,7 +15,11 @@ const renderChildPage = (routerTree: IRouteParseResult) => {
       case genRouter.content.name:
         return <Content />;
       default:
-        return <HashRedirect to={genRouter.home.name} delay={2} placeholder={"2s to redirect"} />;
+        return (
+          <HashRedirect to={genRouter.home.name} delay={2}>
+            2s to redirect
+          </HashRedirect>
+        );
     }
   }
   return <div>NOTHING</div>;
