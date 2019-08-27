@@ -1,8 +1,9 @@
 import { routerRules } from "models/router-rules";
 import { generateTree } from "@jimengio/router-code-generator";
-import fs from "fs";
-import path from "path";
-import prettier from "prettier";
+
+let fs = require("fs");
+let path = require("path");
+let prettier = require("prettier");
 
 let filePath = path.join(process.env.PWD, "example/controller/generated-router.ts");
 let prettierConfigs = JSON.parse(fs.readFileSync(path.join(process.env.PWD, ".prettierrc"), "utf8"));
