@@ -1,5 +1,5 @@
 {
-  "name": "mst-workflow",
+  "name": "ts-workflow",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,8 +22,8 @@
   "devDependencies": {
     "@jimengio/ci-progress-webpack-plugin": "^0.1.0",
     "@jimengio/router-code-generator": "^0.1.5",
-    "@types/lodash": "^4.14.137",
-    "@types/node": "^12.7.2",
+    "@types/lodash": "^4.14.138",
+    "@types/node": "^12.7.3",
     "@types/prettier": "^1.18.2",
     "@types/query-string": "^6.3.0",
     "@types/react": "^16.9.2",
@@ -43,10 +43,10 @@
     "ts-node": "^8.3.0",
     "tsconfig-paths": "^3.8.0",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
-    "typescript": "^3.5.3",
+    "typescript": "^3.6.2",
     "typescript-styled-plugin": "^0.14.0",
     "url-loader": "^2.1.0",
-    "webpack": "^4.39.2",
+    "webpack": "^4.39.3",
     "webpack-bundle-analyzer": "^3.4.1",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
@@ -54,12 +54,12 @@
   },
   "dependencies": {
     "@jimengio/ruled-router": "^0.2.15",
-    "dayjs": "^1.8.15",
-    "emotion": "^10.0.14",
+    "dayjs": "^1.8.16",
+    "emotion": "^10.0.17",
     "font-awesome": "^4.7.0",
     "immer": "^3.2.0",
     "lodash": "^4.17.15",
-    "query-string": "^6.8.2",
+    "query-string": "^6.8.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   }
