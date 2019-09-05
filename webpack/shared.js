@@ -1,8 +1,23 @@
+let MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 exports.matchCssRule = {
   test: /\.css$/,
   use: [
     {
       loader: "style-loader",
+    },
+    {
+      loader: "css-loader",
+    },
+  ],
+};
+
+exports.matchExtractCssRule = {
+  test: /\.css$/,
+  use: [
+    {
+      loader: MiniCssExtractPlugin.loader,
+      options: { publicPath: "./" },
     },
     {
       loader: "css-loader",

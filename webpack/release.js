@@ -5,9 +5,10 @@ let HtmlWebpackTagsPlugin = require("html-webpack-tags-plugin");
 // let { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 let DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 let ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+let MiniCssExtractPlugin = require("mini-css-extract-plugin");
 let ProgressPlugin = require("@jimengio/ci-progress-webpack-plugin");
 
-let { matchCssRule, matchFontsRule, matchTsReleaseRule } = require("./shared");
+let { matchExtractCssRule, matchFontsRule, matchTsReleaseRule } = require("./shared");
 let splitChunks = require("./split-chunks");
 let dllManifest = require("./dll/manifest-release.json");
 
@@ -28,7 +29,7 @@ module.exports = {
     splitChunks: splitChunks,
   },
   module: {
-    rules: [matchCssRule, matchFontsRule, matchTsReleaseRule],
+    rules: [matchExtractCssRule, matchFontsRule, matchTsReleaseRule],
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
@@ -46,6 +47,10 @@ module.exports = {
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin({ checkSyntacticErrors: true, async: false }),
+    new MiniCssExtractPlugin({
+      filename: "[name].[hash:8].css",
+      chunkFilename: "[name].[chunkhash:8].css",
+    }),
     new webpack.DllReferencePlugin({
       manifest: path.resolve(__dirname, "dll/manifest-release.json"),
     }),
