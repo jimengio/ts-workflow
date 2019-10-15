@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import { parseRoutePath, IRouteParseResult } from "@jimengio/ruled-router";
 import { css } from "emotion";
 
@@ -25,18 +25,23 @@ const renderChildPage = (routerTree: IRouteParseResult) => {
   return <div>NOTHING</div>;
 };
 
-export default (props) => {
+let Container: FC<{
+  router: IRouteParseResult;
+}> = React.memo((props) => {
+  /** Methods */
+  /** Effects */
+  /** Renderers */
   return (
     <div className={styleContainer}>
       <div className={styleTitle}>Container</div>
       {renderChildPage(props.router)}
     </div>
   );
-};
+});
 
-const styleContainer = css`
-  font-family: "Helvetica";
-`;
+export default Container;
+
+const styleContainer = css``;
 
 const styleTitle = css`
   margin-bottom: 16px;
