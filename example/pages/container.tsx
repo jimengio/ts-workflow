@@ -1,18 +1,17 @@
 import React, { FC } from "react";
-import { parseRoutePath, IRouteParseResult } from "@jimengio/ruled-router";
 import { css } from "emotion";
 
 import Home from "./home";
 import Content from "./content";
 import { HashRedirect } from "@jimengio/ruled-router/lib/dom";
-import { genRouter } from "controller/generated-router";
+import { genRouter, GenRouterTypeMain } from "controller/generated-router";
 
-const renderChildPage = (routerTree: IRouteParseResult) => {
+const renderChildPage = (routerTree: GenRouterTypeMain) => {
   if (routerTree != null) {
     switch (routerTree.name) {
-      case genRouter.home.name:
+      case "home":
         return <Home />;
-      case genRouter.content.name:
+      case "content":
         return <Content />;
       default:
         return (
@@ -26,7 +25,7 @@ const renderChildPage = (routerTree: IRouteParseResult) => {
 };
 
 let Container: FC<{
-  router: IRouteParseResult;
+  router: GenRouterTypeMain;
 }> = React.memo((props) => {
   /** Methods */
   /** Effects */
