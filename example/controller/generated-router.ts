@@ -12,6 +12,8 @@ function qsStringify(queries: { [k: string]: string }) {
 
 // generated
 
+// Generated with router-code-generator@0.2.4-a4
+
 export let genRouter = {
   home: {
     name: "home",
@@ -38,3 +40,32 @@ export let genRouter = {
     go: () => switchPath(`/`),
   },
 };
+
+export type GenRouterTypeMain = GenRouterTypeTree["home"] | GenRouterTypeTree["content"] | GenRouterTypeTree["else"] | GenRouterTypeTree["$"];
+
+export interface GenRouterTypeTree {
+  home: {
+    name: "home";
+    params: {};
+    query: {};
+    next: null;
+  };
+  content: {
+    name: "content";
+    params: {};
+    query: {};
+    next: null;
+  };
+  else: {
+    name: "else";
+    params: {};
+    query: {};
+    next: null;
+  };
+  $: {
+    name: "home";
+    params: {};
+    query: {};
+    next: null;
+  };
+}
