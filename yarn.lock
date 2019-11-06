@@ -91,17 +91,17 @@
   resolved "https://registry.npmjs.org/@jimengio/ci-progress-webpack-plugin/-/ci-progress-webpack-plugin-0.1.1.tgz#3029a2be1df8f0432fc85a8afa926adc004c4f0a"
   integrity sha512-uVf9yrZHFzT6FC+ZKeuv2GjqKoBaB+ceKZDIqqGH9cL/8iWmvXKKB6LXkCOVVEr9nsJaHOEKQfNGUSELgUzXPw==
 
-"@jimengio/router-code-generator@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.npmjs.org/@jimengio/router-code-generator/-/router-code-generator-0.2.4.tgz#b609e08d11bf10a3c034bf3218f7e697f1242534"
-  integrity sha512-6CEDbDdVA7D25CG0yJD7sjO5MUyNrR8CUjTIKWgFuL4SUm+eNHwLvxZX6MRzTUMKqgnw74LKje15rsTSZxWp4Q==
+"@jimengio/router-code-generator@^0.2.5-a1":
+  version "0.2.5-a1"
+  resolved "https://registry.npmjs.org/@jimengio/router-code-generator/-/router-code-generator-0.2.5-a1.tgz#75c5d72b0c516030fcf89f1124e7e99b5df8051e"
+  integrity sha512-bhrYpPX9wvCQ7ADfVIBEu0Ph/MwquFE4gtGXQNN83wSJpB4sEDqOVmYuoAChP6N8uwLrVi14dUQX5UwiJ+UmhA==
 
-"@jimengio/ruled-router@^0.2.18":
-  version "0.2.18"
-  resolved "https://registry.npmjs.org/@jimengio/ruled-router/-/ruled-router-0.2.18.tgz#0f39bcbf3b7ba37813fa9316c5da769fcd8ae5ac"
-  integrity sha512-aAeqte0PYpVHdNIcX8YlF3HKxHZOpuF9aQOtZsaCwYecN1J0U7z0TS5X8QBbGfjjopK8ip0LYJgB6nQTdxOoWg==
+"@jimengio/ruled-router@^0.2.19-a1":
+  version "0.2.19-a1"
+  resolved "https://registry.npmjs.org/@jimengio/ruled-router/-/ruled-router-0.2.19-a1.tgz#2248046733f034621d000988c11dde31c7b9f600"
+  integrity sha512-VeSYetIMd3ftUzcFOgHECb3yItH8Ly3zVhbxVGg3w2A9rBEII4qR+xLw1wb08TGe5/xbWEW9ThFEX+677K0VdA==
   dependencies:
-    query-string "^6.8.1"
+    query-string "^6.8.3"
 
 "@types/events@*":
   version "3.0.0"
@@ -4003,7 +4003,7 @@ qs@~2.3.3:
   resolved "https://registry.npmjs.org/qs/-/qs-2.3.3.tgz#e9e85adbe75da0bbe4c8e0476a086290f863b404"
   integrity sha1-6eha2+ddoLvkyOBHaghikPhjtAQ=
 
-query-string@*, query-string@^6.8.1, query-string@^6.8.3:
+query-string@*, query-string@^6.8.3:
   version "6.8.3"
   resolved "https://registry.npmjs.org/query-string/-/query-string-6.8.3.tgz#fd9fb7ffb068b79062b43383685611ee47777d4b"
   integrity sha512-llcxWccnyaWlODe7A9hRjkvdCKamEKTh+wH8ITdTc3OhchaqUZteiSCX/2ablWHVrkVIe04dntnaZJ7BdyW0lQ==

@@ -21,7 +21,7 @@
   "license": "ISC",
   "devDependencies": {
     "@jimengio/ci-progress-webpack-plugin": "^0.1.0",
-    "@jimengio/router-code-generator": "^0.2.4",
+    "@jimengio/router-code-generator": "^0.2.5-a1",
     "@types/lodash": "^4.14.144",
     "@types/node": "^12.12.6",
     "@types/prettier": "^1.18.3",
@@ -54,7 +54,7 @@
     "webpack-hud": "^0.1.2"
   },
   "dependencies": {
-    "@jimengio/ruled-router": "^0.2.18",
+    "@jimengio/ruled-router": "^0.2.19-a1",
     "dayjs": "^1.8.16",
     "emotion": "^10.0.23",
     "font-awesome": "^4.7.0",

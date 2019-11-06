@@ -8,7 +8,7 @@ export default class Home extends React.Component {
     return (
       <div>
         Content Page
-        <HashLink to={genRouter.home.name} className={styleButton} text={"Back to home"} />
+        <HashLink to={genRouter.home.path()} className={styleButton} text={"Back to home"} />
       </div>
     );
   }

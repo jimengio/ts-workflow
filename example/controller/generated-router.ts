@@ -6,13 +6,13 @@ function switchPath(x: string) {
   location.hash = `#${x}`;
 }
 
-function qsStringify(queries: { [k: string]: string }) {
-  return queryString.stringify(queries);
+function qsStringify(queries: { [k: string]: any }) {
+  return queryString.stringify(queries, { arrayFormat: "bracket" });
 }
 
 // generated
 
-// Generated with router-code-generator@0.2.4
+// Generated with router-code-generator@0.2.5-a1
 
 export let genRouter = {
   home: {
