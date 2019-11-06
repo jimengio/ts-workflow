@@ -56,6 +56,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "template.ejs",
+      trackingCode: "",
     }),
     new HtmlWebpackTagsPlugin({
       tags: [`dll/${dllManifest.name}.js`],
