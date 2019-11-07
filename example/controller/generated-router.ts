@@ -12,7 +12,7 @@ function qsStringify(queries: { [k: string]: any }) {
 
 // generated
 
-// Generated with router-code-generator@0.2.5-a1
+// Generated with router-code-generator@0.2.5
 
 export let genRouter = {
   home: {
