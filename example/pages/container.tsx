@@ -7,20 +7,19 @@ import { HashRedirect } from "@jimengio/ruled-router/lib/dom";
 import { genRouter, GenRouterTypeMain } from "controller/generated-router";
 
 const renderChildPage = (routerTree: GenRouterTypeMain) => {
-  if (routerTree != null) {
-    switch (routerTree.name) {
-      case "home":
-        return <Home />;
-      case "content":
-        return <Content />;
-      default:
-        return (
-          <HashRedirect to={genRouter.home.name} delay={2}>
-            2s to redirect
-          </HashRedirect>
-        );
-    }
+  switch (routerTree?.name) {
+    case "home":
+      return <Home />;
+    case "content":
+      return <Content />;
+    default:
+      return (
+        <HashRedirect to={genRouter.home.name} delay={2}>
+          2s to redirect
+        </HashRedirect>
+      );
   }
+
   return <div>NOTHING</div>;
 };
 
