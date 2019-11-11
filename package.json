@@ -21,7 +21,10 @@
   "license": "ISC",
   "devDependencies": {
     "@jimengio/ci-progress-webpack-plugin": "^0.1.0",
+    "@jimengio/doc-frame": "^0.1.5",
+    "@jimengio/flex-styles": "^0.1.6",
     "@jimengio/router-code-generator": "^0.2.5",
+    "@jimengio/shared-utils": "^0.1.5",
     "@types/lodash": "^4.14.146",
     "@types/node": "^12.12.7",
     "@types/prettier": "^1.18.3",
