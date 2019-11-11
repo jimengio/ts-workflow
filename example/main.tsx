@@ -27,8 +27,6 @@ demo();
 
 declare var module: any;
 
-if (module.hot) {
-  module.hot.accept([], () => {
-    renderApp();
-  });
-}
+module.hot?.accept([], () => {
+  renderApp();
+});
