@@ -27,6 +27,8 @@ demo();
 
 declare var module: any;
 
-module.hot?.accept([], () => {
-  renderApp();
-});
+if (module.hot) {
+  module.hot.accept(["./pages/container"], () => {
+    renderApp();
+  });
+}
