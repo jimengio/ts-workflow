@@ -2,26 +2,22 @@ import React, { FC } from "react";
 import { css, cx } from "emotion";
 import { fullscreen, row, expand } from "@jimengio/flex-styles";
 
-import Home from "./home";
-import Content from "./content";
 import { HashRedirect, findRouteTarget } from "@jimengio/ruled-router/lib/dom";
 import { genRouter, GenRouterTypeMain } from "controller/generated-router";
 import { ISidebarEntry, DocSidebar } from "@jimengio/doc-frame";
 
-let items: ISidebarEntry[] = [];
+let items: ISidebarEntry[] = [
+  {
+    title: "Intro",
+    path: genRouter.$.name,
+  },
+];
 
 const renderChildPage = (routerTree: GenRouterTypeMain) => {
   switch (routerTree?.name) {
     case "home":
-      return <Home />;
-    case "content":
-      return <Content />;
     default:
-      return (
-        <HashRedirect to={genRouter.home.name} delay={2}>
-          2s to redirect
-        </HashRedirect>
-      );
+      return <HashRedirect to={genRouter.$.path()} noDelay />;
   }
 
   return <div>NOTHING</div>;
