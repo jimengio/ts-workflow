@@ -1,5 +1,5 @@
 {
-  "name": "ts-workflow",
+  "name": "@jimengio/ts-workflow",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
