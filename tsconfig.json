@@ -13,6 +13,7 @@
     "lib": ["es2016", "dom"],
     "types": ["node"],
     "baseUrl": "./example/",
+    "importsNotUsedAsValues": "preserve",
     "plugins": [
       {
         "name": "typescript-styled-plugin"
