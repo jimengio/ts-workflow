@@ -3,7 +3,7 @@ import { css, cx } from "emotion";
 import { fullscreen, row, expand } from "@jimengio/flex-styles";
 
 import { HashRedirect, findRouteTarget } from "@jimengio/ruled-router/lib/dom";
-import { genRouter, GenRouterTypeMain } from "controller/generated-router";
+import { genRouter, GenRouterTypeTree } from "controller/generated-router";
 import { ISidebarEntry, DocSidebar } from "@jimengio/doc-frame";
 
 let items: ISidebarEntry[] = [
@@ -13,7 +13,7 @@ let items: ISidebarEntry[] = [
   },
 ];
 
-const renderChildPage = (routerTree: GenRouterTypeMain) => {
+const renderChildPage = (routerTree: GenRouterTypeTree["next"]) => {
   switch (routerTree?.name) {
     case "home":
     default:
@@ -30,7 +30,7 @@ let onSwitchPage = (path: string) => {
   }
 };
 
-let Container: FC<{ router: GenRouterTypeMain }> = React.memo((props) => {
+let Container: FC<{ router: GenRouterTypeTree["next"] }> = React.memo((props) => {
   /** Methods */
   /** Effects */
   /** Renderers */
